@@ -1,11 +1,23 @@
 - defaults:
     link:
+      create: true
       relink: true
 
 - brewfile:
     - brew/Brewfile
 
-- clean: ['~']
+- clean: ["~"]
+
 - link:
     ~/.zshrc: zsh/.zshrc
-- shell: []
+    ~/.gitconfig.local: $DOTFILES/git/gitconfig.local
+    ~/.git/template.txt: $DOTFILES/git/template.txt
+
+- shell:
+    - [
+        antibody bundle < "$DOTFILES/antibody/bundles.txt" > "$DOTFILES/zsh/zsh_plugins.zsh",
+        Update Antibody Plugins,
+      ]
+    - [antibody update, Install Plugins]
+    - [sh -c $DOTFILES/git/setup_gitconfig.sh, Configure .gitconfig]
+    - [sh -c $DOTFILES/git/install.sh, Additonal Config]

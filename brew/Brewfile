@@ -1,3 +1,7 @@
 brew "exa"
 brew "hub"
 brew "jabba"
+brew "antibody"
+brew "diff-so-fancy"
+
+cask "visual-studio-code"
