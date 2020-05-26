@@ -7,10 +7,16 @@ if command -v exa >/dev/null 2>&1; then
   alias lg="exa -lagh --git"
 fi
 
-if [ ! -z "$(jabba alias default)" ]; then
-    jabba use default
+if command -v jabba >/dev/null 2>&1; then
+  if [ ! -z "$(jabba alias default)" ]; then
+      jabba use default
+  fi
 fi
 
 if command -v hub >/dev/null 2>&1; then
   eval "$(hub alias -s)"
+fi
+
+if command -v bat >/dev/null 2>&1; then
+  alias cat="bat"
 fi

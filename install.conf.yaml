@@ -10,14 +10,15 @@
 
 - link:
     ~/.zshrc: zsh/.zshrc
-    ~/.gitconfig.local: $DOTFILES/git/gitconfig.local
-    ~/.git/template.txt: $DOTFILES/git/template.txt
+    ~/.gitconfig.local: git/gitconfig.local
+    ~/.git/template.txt: git/template.txt
 
 - shell:
     - [
-        antibody bundle < "$DOTFILES/antibody/bundles.txt" > "$DOTFILES/zsh/zsh_plugins.zsh",
-        Update Antibody Plugins,
+        antibody bundle < "antibody/bundles.txt" > "zsh/zsh_plugins.zsh",
+        Update Antibody Plugins
       ]
     - [antibody update, Install Plugins]
-    - [sh -c $DOTFILES/git/setup_gitconfig.sh, Configure .gitconfig]
-    - [sh -c $DOTFILES/git/install.sh, Additonal Config]
+    - [sh -c git/setup_gitconfig.sh, Configure .gitconfig]
+    - [sh -c git/install.sh, Additonal Config]
+    - [curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh, Install Jabba]
