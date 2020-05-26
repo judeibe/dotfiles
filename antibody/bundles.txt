@@ -1,6 +1,5 @@
 caarlos0/zsh-git-sync kind:path
 mafredri/zsh-async
-rupa/z
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 robbyrussell/oh-my-zsh path:plugins/gitfast

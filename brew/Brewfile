@@ -1,7 +1,9 @@
 brew "exa"
 brew "hub"
-brew "jabba"
 brew "antibody"
 brew "diff-so-fancy"
+brew "gpg"
+brew "bat"
 
 cask "visual-studio-code"
+cask "iterm2"
