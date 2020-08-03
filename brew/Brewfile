@@ -4,6 +4,8 @@ brew "antibody"
 brew "diff-so-fancy"
 brew "gpg"
 brew "bat"
+brew "git-flow-avh"
 
 cask "visual-studio-code"
 cask "iterm2"
+cask "rectangle"
